@@ -5,10 +5,10 @@ resources:
     source:
       uri: https://github.com/Kuriyano/concourse-tutorial-clone.git
       branch: master
-  - name: my-timer
-    type: time
-    source:
-      interval: 2m
+#  - name: my-timer
+#    type: time
+#    source:
+#      interval: 2m
 
 jobs:
   - name: job-hello-world
@@ -16,7 +16,7 @@ jobs:
     plan:
       - get: resource-kirby
         trigger: true
-      - get: my-timer
-        trigger: true
+#      - get: my-timer
+#        trigger: true
       - task: hello-world
         file: resource-kirby/tutorials/basic/task-hello-world/task_hello_world.yml
