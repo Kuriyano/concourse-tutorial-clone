@@ -1,15 +1,15 @@
 ---
 resources:
-  - name: resource-tutorial
+  - name: resource-kirby
     type: git
     source:
-      uri: https://github.com/starkandwayne/concourse-tutorial.git
-      branch: develop
+      uri: https://github.com/Kuriyano/concourse-tutorial-clone.git
+      branch: master
 
 jobs:
   - name: job-hello-world
     public: true
     plan:
-      - get: resource-tutorial
+      - get: resource-kirby
       - task: hello-world
-        file: resource-tutorial/tutorials/basic/task-hello-world/task_hello_world.yml
+        file: resource-kirby/tutorials/basic/task-hello-world/task_hello_world.yml
