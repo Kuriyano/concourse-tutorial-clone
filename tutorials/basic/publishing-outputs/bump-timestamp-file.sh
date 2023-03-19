@@ -3,7 +3,7 @@
 set -e # fail fast
 set -x # print commands
 
-git clone resource-gist updated-gist
+git clone resource-tutorial updated-gist
 
 cd updated-gist
 date > bumpme
